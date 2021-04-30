@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMPhone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js" integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 手机界面 -->
+    <div class="mobile-wrapper">
+        <div class="title">
+            <h1>RM Phone v1.0.0</h1>
+            <h5>虚拟手机</h5>
+        </div>
+        <div class="mobile">
+            <div id="phone"></div>
+        </div>
+    </div>
+
+    <!-- 快捷界面 -->
+    <div class="mdui-fab-wrapper" id="quickFab">
+        <button class="mdui-fab mdui-ripple mdui-color-theme-accent">
+          <i class="mdui-icon material-icons">&#xe8b8;</i>
+          <i class="mdui-icon mdui-fab-opened material-icons">&#xe8b9</i>
+        </button>
+        <div class="mdui-fab-dial">
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" id="open-settings">
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '操作', position: 'top'}">&#xe8b8;</i>
+            </button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red">
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'top'}">bookmark</i>
+            </button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange">
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'top'}">access_alarms</i>
+            </button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue">
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'top'}">touch_app</i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 操作界面 -->
+    <div class="settings-wrapper mdui-shadow-10">
+        <h1>操作手机</h1>
+        <h5 class="details">或者,这不是个手机……</h5>
+        <div id="close-settings">
+            <i class="mdui-icon material-icons">&#xe5cd;</i>
+        </div>
+    </div>
+    <div class="settings-hover-layer"></div>
+
+    <script src="js/screen.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
