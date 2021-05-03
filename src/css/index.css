@@ -7,6 +7,16 @@
     }
 }
 
+@keyframes settings-hide {
+    0% {
+        height: 450px;
+    }
+    100% {
+        height: 0px;
+        display: none;
+    }
+}
+
 .mobile-wrapper {
     margin: 50px auto;
     display: block;
@@ -72,7 +82,14 @@
 
 .settings-wrapper.show {
     display: block;
-    animation: settings-show 0.5s normal;
+    animation: settings-show 0.5s normal cubic-bezier(0.4, 0.0, 0.2, 1);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.settings-wrapper.hide {
+    display: block;
+    animation: settings-hide 0.5s normal cubic-bezier(0.4, 0.0, 0.2, 1);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

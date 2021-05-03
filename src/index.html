@@ -20,8 +20,11 @@
             <h5>虚拟手机</h5>
         </div>
         <div class="mobile">
-            <div id="phone"></div>
+            <div id="phone">
+                <iframe src="" frameborder="1" width="650px" height="700px" id="phone-screen"></iframe>
+            </div>
         </div>
+        <button id="open-settings" class="mdui-btn mdui-ripple mdui-color-blue-600">打开操作界面</button>
     </div>
 
     <!-- 快捷界面 -->
@@ -32,16 +35,16 @@
         </button>
         <div class="mdui-fab-dial">
             <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" id="open-settings">
-                <i class="mdui-icon material-icons" mdui-tooltip="{content: '操作', position: 'top'}">&#xe8b8;</i>
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '操作', position: 'left'}">&#xe8b8;</i>
             </button>
             <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red">
-                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'top'}">bookmark</i>
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'left'}">bookmark</i>
             </button>
             <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange">
-                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'top'}">access_alarms</i>
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'left'}">access_alarms</i>
             </button>
             <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue">
-                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'top'}">touch_app</i>
+                <i class="mdui-icon material-icons" mdui-tooltip="{content: '无', position: 'left'}">touch_app</i>
             </button>
         </div>
     </div>
@@ -53,6 +56,7 @@
         <div id="close-settings">
             <i class="mdui-icon material-icons">&#xe5cd;</i>
         </div>
+        <button class="mdui-btn mdui-ripple mdui-color-blue-600" onclick="power(true)">开机</button>
     </div>
     <div class="settings-hover-layer"></div>
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js" integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A" crossorigin="anonymous"></script>
+    <title>index</title>
+    <style>
+        body {
+            background-color: #fff;
+            width: 650px;
+            height: 700px;
+            overflow: scroll;
+        }
+        
+        header {
+            background-color: #CCCCFF;
+            opacity: 0.5;
+            width: 100%;
+            height: 20px;
+            color: black;
+        }
+        
+        header span {
+            margin-left: 210px;
+        }
+        
+        header span:nth-child(1) {
+            margin-left: 0px;
+        }
+        
+        .app-list {
+            width: 100%;
+            height: 640px;
+            /* border: 1px solid red; */
+        }
+        
+        .app-list .app {
+            width: 100px;
+            height: 120px;
+            margin-top: 20px;
+            margin-left: 40px;
+            border: 1px solid #EEEEEE;
+            border-radius: 10px;
+            background-color: #EEEEEE;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .app-list .app .icon {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .app-list .app span {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span id="network">networl</span>
+        <span id="time">time</span>
+        <span id="battery">100%</span>
+    </header>
+    <div class="app-list">
+        <div class="app" onclick="openP('apps/intE.html')">
+            <img src="apps/icons/intE.jpg" alt="icon" class="icon">
+            <span>浏览器</span>
+        </div>
+        <div class="app">
+            <img src="" alt="icon" class="icon">
+            <span>name</span>
+        </div>
+        <div class="app">
+            <img src="" alt="icon" class="icon">
+            <span>name</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('network').innerText = '网络:优';
+        setInterval(() => {
+            var time = new Date();
+            document.getElementById('time').innerText = time.getHours() + ':' + time.getMinutes() + ':' + time.getSeconds() + '.' + time.getMilliseconds();
+        }, 10);
+
+        function openP(path) {
+            window.location.href = path;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on</title>
+    <style>
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        body {
+            background-color: #000;
+            width: 650px;
+            height: 700px;
+            overflow: hidden;
+        }
+        
+        .center {
+            margin: 100px auto;
+            text-align: center;
+            /* border: 1px solid red; */
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .loading {
+            border: 5px solid #fff;
+            border-left: 5px solid #0099FF;
+            border-radius: 50px;
+            top: 200px;
+            width: 50px;
+            height: 50px;
+            margin: 80px auto;
+            animation: rotate 1s ease-out;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>RM Phone</h1>
+        <div class="loading"></div>
+        <h1 id="txt">loading 0%</h1>
+    </div>
+    <script>
+        var txt = document.getElementById('txt');
+        var n = 0;
+        var l = 'loading ';
+        const inter = setInterval(() => {
+            n += 1;
+            txt.innerText = l + String(n) + '%';
+            if (n == 99) {
+                clearInterval(inter);
+                setTimeout(() => {
+                    txt.innerText = 'finished!';
+                    setTimeout(() => {
+                        location.href = 'index.html';
+                    }, 1000);
+                }, 1000);
+            }
+        }, 10);
+    </script>
+</body>
+
+</html>
